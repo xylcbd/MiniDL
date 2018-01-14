@@ -125,7 +125,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="DenseOP.cpp" />
+    <ClCompile Include="InplaceOPs.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MiniDL.cpp" />
+    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Tools.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Configure.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="DenseOP.h" />
+    <ClInclude Include="InplaceOPs.h" />
+    <ClInclude Include="LossFunctor.h" />
+    <ClInclude Include="MiniDL.h" />
+    <ClInclude Include="Operator.h" />
+    <ClInclude Include="Shape.h" />
+    <ClInclude Include="Tools.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
