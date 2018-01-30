@@ -33,7 +33,10 @@
     <ClCompile Include="DenseOP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InplaceOPs.cpp">
+    <ClCompile Include="ActivateOPs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MathFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,13 +59,16 @@
     <ClInclude Include="DenseOP.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InplaceOPs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="LossFunctor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Configure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivateOPs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MathFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

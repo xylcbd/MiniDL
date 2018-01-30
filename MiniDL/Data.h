@@ -11,6 +11,8 @@ namespace MiniDL
 		Data(const Shape& new_shape);
 		~Data();
 	public:
+		bool is_empty() const;
+		void clear();
 		void reshape(const Shape& new_shape);
 		Shape get_shape() const;
 		const DataType& get_data() const;
@@ -20,6 +22,6 @@ namespace MiniDL
 		//shape of data
 		Shape shape;
 		//data container
-		DataType data;
+		DataType mems;
 	};
 } //namespace MiniDL

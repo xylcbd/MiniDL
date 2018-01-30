@@ -1,5 +1,5 @@
 #include <cmath>
-#include "InplaceOPs.h"
+#include "ActivateOPs.h"
 #include "Tools.h"
 
 namespace MiniDL
@@ -10,6 +10,7 @@ namespace MiniDL
 	void SigmoidOP::forward(const std::vector<Data*>& inputs,
 		std::vector<Data*>& outputs)
 	{		
+		//TODO: ¿¼ÂÇbatch_size
 		do_assert(inputs.size() == outputs.size(), "size of inputs must be equals with outputs.");
 		do_assert(inputs.size() > 0, "size of inputs must be larger then zero.");
 

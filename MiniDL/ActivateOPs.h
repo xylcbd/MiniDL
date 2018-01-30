@@ -6,7 +6,7 @@ namespace MiniDL
 	//active functions
 
 	//sigmoid function
-	// 1.0/(1.0 + e^(-x))
+	// y = 1.0/(1.0 + e^(-x))
 	class SigmoidOP : public Operator
 	{
 	public:

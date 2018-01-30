@@ -15,8 +15,9 @@ namespace MiniDL
 		int get_total() const;
 		int get_dims() const;
 		int get_dim(const int index) const;
+		void clear();
 	private:
-		std::vector<int> data;
+		std::vector<int> mems;
 	};
 
 }// namespace MiniDL

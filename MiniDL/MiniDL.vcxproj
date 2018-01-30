@@ -127,8 +127,9 @@
   <ItemGroup>
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="DenseOP.cpp" />
-    <ClCompile Include="InplaceOPs.cpp" />
+    <ClCompile Include="ActivateOPs.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MathFunctions.cpp" />
     <ClCompile Include="MiniDL.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Tools.cpp" />
@@ -137,8 +138,9 @@
     <ClInclude Include="Configure.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="DenseOP.h" />
-    <ClInclude Include="InplaceOPs.h" />
+    <ClInclude Include="ActivateOPs.h" />
     <ClInclude Include="LossFunctor.h" />
+    <ClInclude Include="MathFunctions.h" />
     <ClInclude Include="MiniDL.h" />
     <ClInclude Include="Operator.h" />
     <ClInclude Include="Shape.h" />

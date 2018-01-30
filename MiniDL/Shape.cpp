@@ -9,7 +9,7 @@ namespace MiniDL
 
 	Shape::Shape(const std::initializer_list<int> items)
 	{
-		data = items;
+		mems = items;
 	}
 
 	Shape::~Shape()
@@ -18,27 +18,36 @@ namespace MiniDL
 
 	int Shape::get_total() const
 	{
-		int acc = 1;
-		for (size_t i = 0; i < data.size(); i++)
+		if (mems.empty())
 		{
-			acc *= data[i];
+			return 0;
 		}
+		int acc = 1;
+		for (size_t i = 0; i < mems.size(); i++)
+		{
+			acc *= mems[i];
+		}		
 		return acc;
 	}
 
 	int Shape::get_dims() const
 	{
-		return (int)data.size();
+		return (int)mems.size();
 	}
 
 	int Shape::get_dim(const int index) const
 	{
-		do_assert(index >= 0 && index < data.size(), "index is invalidate.");
-		return data[index];
+		do_assert(index >= 0 && index < mems.size(), "index is invalidate.");
+		return mems[index];
+	}
+
+	void Shape::clear()
+	{
+		mems.clear();
 	}
 
 	bool Shape::operator==(const Shape& other) const
 	{
-		return this->data == other.data;
+		return this->mems == other.mems;
 	}
 } //namespace MiniDL

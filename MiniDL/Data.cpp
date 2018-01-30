@@ -19,10 +19,21 @@ namespace MiniDL
 
 	}
 
+	bool Data::is_empty() const
+	{
+		return shape.get_total() == 0;
+	}
+
+	void Data::clear()
+	{
+		shape.clear();
+		mems.clear();
+	}
+
 	void Data::reshape(const Shape& new_shape)
 	{
 		shape = new_shape;
-		data.resize(shape.get_total());
+		mems.resize(shape.get_total());
 		//fill zero ?
 		fill(0.0f);
 	}
@@ -34,16 +45,16 @@ namespace MiniDL
 
 	const DataType& Data::get_data() const
 	{
-		return data;
+		return mems;
 	}
 
 	DataType& Data::get_data()
 	{
-		return data;
+		return mems;
 	}
 
 	void Data::fill(const float val)
 	{
-		std::fill(data.begin(), data.end(), val);
+		std::fill(mems.begin(), mems.end(), val);
 	}
 } //namespace MiniDL
