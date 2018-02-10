@@ -3,6 +3,7 @@
 #include "Configure.h"
 #include "Data.h"
 #include "Operator.h"
+#include "LossFunctor.h"
 
 namespace MiniDL
 {
@@ -15,11 +16,20 @@ namespace MiniDL
 		// 增加OP
 		Network& add_op(Operator* op);
 
+		// 设置LossFunctor
+		void set_loss_functor(LossFunctor* loss_functor);
+
 		// 前向传播
-		void forward(const std::vector<Data*>& inputs);
+		void forward(const std::vector<Data*>& inputs, std::vector<Data*>& predicts);
 
 		// 反向传播
 		void backward(const std::vector<Data*>& inputs, const std::vector<Data*>& groundtruthes);
+
+		// loss计算
+		float get_loss(const std::vector<Data*>& groundtruthes, const std::vector<Data*>& predicts);
+
+		// 更新参数
+		void update_weights();
 
 		// 保存模型
 		bool save_model(const std::string& model_path) const;
@@ -27,7 +37,10 @@ namespace MiniDL
 		// 加载模型
 		bool load_model(const std::string& model_path);
 	private:
+		// 所有op
 		std::vector<Operator*> ops;
+		// loss_functor
+		LossFunctor* loss_functor = nullptr;
 	};
 
 } //namespace MiniDL

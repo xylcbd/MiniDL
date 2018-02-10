@@ -128,6 +128,7 @@
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="DenseOP.cpp" />
     <ClCompile Include="ActivateOPs.cpp" />
+    <ClCompile Include="InputOP.cpp" />
     <ClCompile Include="LossFunctor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MathFunctions.cpp" />
@@ -141,6 +142,7 @@
     <ClInclude Include="Data.h" />
     <ClInclude Include="DenseOP.h" />
     <ClInclude Include="ActivateOPs.h" />
+    <ClInclude Include="InputOP.h" />
     <ClInclude Include="LossFunctor.h" />
     <ClInclude Include="MathFunctions.h" />
     <ClInclude Include="MiniDL.h" />
