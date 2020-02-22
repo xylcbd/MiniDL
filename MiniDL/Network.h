@@ -1,5 +1,6 @@
 #pragma once
 #pragma once
+#include<string>
 #include "Configure.h"
 #include "Data.h"
 #include "Operator.h"
@@ -7,37 +8,37 @@
 
 namespace MiniDL
 {
-	// 1. ÃèÊöÍøÂçµÄÍØÆË½á¹¹
-	// 2. ¿ØÖÆÊı¾İµÄÁ÷Ïò
-	// 3. Ä£ĞÍ¼ÓÔØºÍ±£´æ	
+	// 1. ?????????????Ë½á¹¹
+	// 2. ???????İµ?????
+	// 3. Ä£?Í¼??ØºÍ±???	
 	class Network
 	{
 	public:
-		// Ôö¼ÓOP
+		// ????OP
 		Network& add_op(Operator* op);
 
-		// ÉèÖÃLossFunctor
+		// ????LossFunctor
 		void set_loss_functor(LossFunctor* loss_functor);
 
-		// Ç°Ïò´«²¥
+		// Ç°?ò´«²?
 		void forward(const std::vector<Data*>& inputs, std::vector<Data*>& predicts);
 
-		// ·´Ïò´«²¥
+		// ???ò´«²?
 		void backward(const std::vector<Data*>& inputs, const std::vector<Data*>& groundtruthes);
 
-		// loss¼ÆËã
+		// loss????
 		float get_loss(const std::vector<Data*>& groundtruthes, const std::vector<Data*>& predicts);
 
-		// ¸üĞÂ²ÎÊı
+		// ???Â²???
 		void update_weights();
 
-		// ±£´æÄ£ĞÍ
+		// ????Ä£??
 		bool save_model(const std::string& model_path) const;
 
-		// ¼ÓÔØÄ£ĞÍ
+		// ????Ä£??
 		bool load_model(const std::string& model_path);
 	private:
-		// ËùÓĞop
+		// ????op
 		std::vector<Operator*> ops;
 		// loss_functor
 		LossFunctor* loss_functor = nullptr;

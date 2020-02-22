@@ -1,6 +1,6 @@
 #pragma once
-#include "network.h"
-#include "tools.h"
+#include "Network.h"
+#include "Tools.h"
 
 namespace MiniDL
 {
@@ -11,47 +11,47 @@ namespace MiniDL
 		return *this;
 	}
 
-	// 设置LossFunctor
+	// ????LossFunctor
 	void Network::set_loss_functor(LossFunctor* loss_functor)
 	{
 		do_assert(loss_functor != nullptr, "loss functor can't be NULL.");
 		this->loss_functor = loss_functor;
 	}
 
-	// 前向传播
+	// 前?虼?
 	void Network::forward(const std::vector<Data*>& inputs, std::vector<Data*>& predicts)
 	{
 		//TODO
 	}
 
-	// 反向传播
+	// ???虼?
 	void Network::backward(const std::vector<Data*>& inputs, const std::vector<Data*>& groundtruthes)
 	{
 		do_assert(loss_functor != nullptr, "loss functor can't be NULL.");
 		//TODO
 	}
 
-	// loss计算
+	// loss????
 	float Network::get_loss(const std::vector<Data*>& groundtruthes, const std::vector<Data*>& predicts)
 	{
 		do_assert(loss_functor != nullptr, "loss functor can't be NULL.");
 		return loss_functor->get_loss(groundtruthes, predicts);
 	}
 
-	// 更新参数
+	// ???虏???
 	void Network::update_weights()
 	{
 		//TODO
 	}
 
-	// 保存模型
+	// ????模??
 	bool Network::save_model(const std::string& model_path) const
 	{
 		//TODO
 		return false;
 	}
 
-	// 加载模型
+	// ????模??
 	bool Network::load_model(const std::string& model_path)
 	{
 		//TODO
